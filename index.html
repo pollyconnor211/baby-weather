@@ -21,7 +21,7 @@ background:rgba(255,255,255,.35);bottom:-42px;left:-24px}
 .hero .city,.hero .date,.hero .alert,.hero .sub{position:relative;z-index:2}
 .hero .city{font-size:15px;opacity:.85;letter-spacing:1px;color:#9A5E33}
 .hero .date{font-size:21px;font-weight:800;margin-top:2px;color:#7A4526}
-.hero .temp{position:absolute;top:14px;right:20px;font-size:56px;font-weight:300;line-height:1;z-index:2;color:#8A4E28}
+.hero .temp{position:relative;z-index:2;font-size:58px;font-weight:300;line-height:1;margin-top:8px;color:#8A4E28;text-shadow:0 1px 0 rgba(255,255,255,.5)}
 .hero .temp sup{font-size:22px;font-weight:400}
 .hero .alert{display:inline-block;margin-top:10px;padding:6px 13px;border-radius:999px;
 background:rgba(255,255,255,.6);font-size:12.5px;color:#A3622F;font-weight:700}
@@ -246,13 +246,30 @@ padding:7px 13px;box-shadow:0 3px 10px rgba(214,150,80,.14);backdrop-filter:blur
 .wg .wgn{font-size:11.5px;font-weight:800;color:#7A5230;margin-top:6px}
 .wg .wgv{display:inline-block;margin-top:4px;font-size:11px;font-weight:900;color:#fff;
 background:linear-gradient(135deg,#F6A54C,#EC8530);border-radius:999px;padding:2px 10px}
-/* ---- hero 顶部标题与宝宝照片 ---- */
-.htitle{position:relative;z-index:2;font-size:21px;font-weight:900;letter-spacing:1.5px;color:#7A4A1F;text-shadow:0 1px 0 rgba(255,255,255,.65)}
+/* ---- hero 顶部标题装饰 ---- */
+.htitle{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:9px;
+  font-size:23px;font-weight:900;letter-spacing:1.5px}
+.ht-ico{font-size:19px;line-height:1;filter:drop-shadow(0 1px 1px rgba(255,255,255,.55));animation:hfloat 3.2s ease-in-out infinite}
+.ht-ico.r{animation-delay:.8s}
+.ht-text{background:linear-gradient(120deg,#F6A54C 0%,#EE7B6B 45%,#EC6F8E 100%);
+  -webkit-background-clip:text;background-clip:text;color:#8A4A22;
+  filter:drop-shadow(0 1px 1px rgba(255,255,255,.6))}
+.ht-line{display:flex;align-items:center;justify-content:center;gap:6px;margin:7px auto 0;
+  position:relative;z-index:2;font-size:11px;color:#E58A5A}
+.ht-line::before,.ht-line::after{content:"";width:46px;height:4px;border-radius:999px;
+  background:linear-gradient(90deg,rgba(246,165,76,0),#F6A54C);box-shadow:0 1px 1px rgba(255,255,255,.6)}
+.ht-line::after{background:linear-gradient(90deg,#EC6F8E,rgba(236,111,142,0))}
+@keyframes hfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 </style></head>
 <body><div class="page">
 
 <div id="hero" class="hero sun">
-  <div class="htitle">诺言宝宝の穿搭指南</div>
+  <div class="htitle">
+    <span class="ht-ico">☀️</span>
+    <span class="ht-text">诺言宝宝の穿搭指南</span>
+    <span class="ht-ico r">🌸</span>
+  </div>
+  <div class="ht-line">❤</div>
   <div class="city">余杭·五常 · 西溪庭院</div>
   <div class="date">10月6日 周二</div>
   <div class="temp">22<sup>°</sup></div>
@@ -424,7 +441,7 @@ background:linear-gradient(135deg,#F6A54C,#EC8530);border-radius:999px;padding:2
   <div class="note">推荐由宝宝月龄（2026-05-21 出生）与实时天气按26℃法则自动生成，个体差异请以后颈手感为准微调。</div>
 </div>
 
-<div class="footer">数据来源 Open-Meteo · 每日 06:00 自动更新<br>生成时间 2026-10-06 09:15 · 26℃穿衣法则</div>
+<div class="footer">数据来源 Open-Meteo · 每日 06:00 自动更新<br>生成时间 2026-10-06 09:18 · 26℃穿衣法则</div>
 </div>
 <script>
 (function(){
